@@ -2,6 +2,15 @@
 #include<stack>
 using namespace std;
 
+
+
+void PrintElementofStack(stack<int>st){
+    while(st.empty()){
+        cout << st.top() ;
+        st.pop();
+    }
+}
+
 int main() {
     //using the stl library function
 
@@ -13,7 +22,9 @@ int main() {
     st.push(4);
     st.push(30);
     cout <<"size of stack is : "<< st.size()<< endl;
+    cout << "Check empty or not : " <<st.empty() << endl;
+   PrintElementofStack(st);
+  
 
-    
     return 0;
 }
