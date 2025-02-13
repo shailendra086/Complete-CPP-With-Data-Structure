@@ -2,50 +2,22 @@
 using namespace std;
 
 
+//linked list node making
 
 class Node {
     public:
     int data;
     Node* next;
-
-    Node(){
-        this->data = 0;
-        this->next = NULL;
-    }
+    //consturcture to initialize the node with data and next pointer
     Node(int data){
         this->data = data;
         this->next = NULL;
     }
 };
 
-
-void print(Node* head){
-
-    Node*temp = head;
-    while(temp != NULL){
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-}
-
 int main() {
-
-    Node* first = new Node(10);
-    Node* second = new Node(20);
-    Node* third = new Node(30);
-    Node* fourth = new Node(40);
-    Node* fifth = new Node(50);
-    Node* six = new Node(60);
-
-    first->next = second;
-    second->next = third;
-    third->next = fourth;
-    fourth->next = fifth;
-    fifth->next = six;
-
-    cout << "Linked List is: ";
-    print(first);
-    
-    
+    Node* node1 = new Node(10);
+    cout << node1->data<<endl;
+    cout << node1->next<<endl;
     return 0;
 }
