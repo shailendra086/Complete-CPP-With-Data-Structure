@@ -1,23 +1,47 @@
 #include <iostream>
 using namespace std;
 
-
-//linked list node making
-
 class Node {
-    public:
+    public : 
     int data;
     Node* next;
-    //consturcture to initialize the node with data and next pointer
-    Node(int data){
-        this->data = data;
+    Node(){
+        this->data = 0;
         this->next = NULL;
     }
+
+    Node (int data){
+        this->data = data;
+        this->next= NULL;
+    }
+
 };
 
+
+void print (Node* head){
+    Node* temp = head;
+    while(temp != NULL){
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+}
 int main() {
-    Node* node1 = new Node(10);
-    cout << node1->data<<endl;
-    cout << node1->next<<endl;
+
+    Node* first = new Node(10);
+    Node* Second = new Node(20);
+    Node* Third = new Node(30);
+    Node* fourth = new Node(40);
+    Node* fifth = new Node(50);
+
+    first->next = Second;
+    Second->next = Third;
+    Third->next = fourth;
+    fourth->next = fifth;
+
+    cout << "Printing the Linklist" << endl;
+
+    print(first);
+    
+    
     return 0;
 }
